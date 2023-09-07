@@ -113,25 +113,6 @@ li {
 
 .action-btn a:first-child { margin: 0 0 0.75em 0; }
 
-.main .social {
-  margin-top: 2.25em;
-  float: none;
-}
-
-.main .social li a {
-  color: #FFFFFF;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border: 1px solid #FFFFFF;
-  font-size: 1em;
-}
-
-.main .social li a:hover {
-  background: #3498db;
-  border: 1px solid #3498db;
-}
-
 /* nav */
 
 .navbar { display: none; }
@@ -146,12 +127,24 @@ li {
 
 .navbar-default .navbar-nav > li > a.btn-default:hover {
   color: #fff;
-  background: transperent;
+  background: transparent;
   border: 1px solid #3498db;
 }
 
 .navbar-default .navbar-nav > li > a.btn-default:hover,
 .navbar-default .navbar-nav > li > a.btn-default:focus { color: #3498db; }
+
+.logo-link .logo-hover {
+  display: none;
+}
+.logo-link:hover {
+    & .logo-hover {
+        display: block;
+    }
+    & .logo-default {
+        display: none;
+    }
+}
 
 .stick {
   display: block;
@@ -161,7 +154,7 @@ li {
   left: 0;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 1px 12px 0px rgba(51, 51, 51, 0.23);
+  box-shadow: 0 1px 12px 0 rgba(51, 51, 51, 0.23);
   -webkit-animation: fadeInDown 1s both;
   animation: fadeInDown 1s both;
 }
@@ -215,7 +208,6 @@ li {
 .section-spacing h2 {
   color: #333;
   font-weight: 300;
-  text-transform: uppercase;
 }
 
 .section-spacing header h3 {
@@ -225,7 +217,6 @@ li {
 
 .advantages h4 {
   font-size: 18px;
-  text-transform: uppercase;
   margin-top: 1.5em;
 }
 
@@ -241,17 +232,6 @@ li {
 .section-spacing header h3,
 .features h4 { margin-top: 0; }
 
-.section-spacing h2 {
-  color: #333;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-.section-spacing header h3 {
-  color: #999;
-  font-size: 20px;
-}
-
 .features .row { margin: 4.5em 0; }
 
 .features .row:last-child { margin-bottom: 0; }
@@ -263,7 +243,6 @@ li {
 
 .features h4 {
   font-size: 20px;
-  text-transform: uppercase;
 }
 
 .features p {
@@ -328,7 +307,19 @@ button.close {
   padding-right: .8em;
 }
 
-.social li:last-child { padding-right: 0; }
+.main .social {
+  margin-top: 2.25em;
+  float: none;
+}
+
+.main .social li a {
+  color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #FFFFFF;
+  font-size: 1em;
+}
 
 .social li a {
   display: block;
@@ -348,6 +339,38 @@ button.close {
   color: #fff;
   background: #3498db;
 }
+
+.main .social li a {
+  & svg {
+    fill: #FFFFFF;
+  }
+}
+.social li a.social-btn:hover {
+  border: 1px solid #FFFFFF;
+  & svg {
+    fill: #FFFFFF;
+  }
+}
+.social li a.social-btn-facebook:hover {
+  background: #3b5998;
+}
+.social li a.social-btn-twitter:hover {
+  background: #55acee;
+}
+.social li a.social-btn-instagram:hover {
+  background: #3f729b;
+}
+.social li a.social-btn-linkedin:hover {
+  background: #007bb6;
+}
+.social li a.social-btn-tiktok:hover {
+  background: #000000;
+}
+.social li a.social-btn-telegram:hover {
+  background: #0088cc;
+}
+
+.social li:last-child { padding-right: 0; }
 
 /* Scroll top */
 

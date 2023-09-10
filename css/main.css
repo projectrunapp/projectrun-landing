@@ -117,14 +117,6 @@ li {
 
 .navbar { display: none; }
 
-.navbar-default .navbar-nav > li > a.btn-default {
-  text-transform: capitalize;
-  color: #fff;
-  padding: .75em 2em;
-  transition: all .5s linear;
-  border: 1px solid #3498db;
-}
-
 .navbar-default .navbar-nav > li > a.btn-default:hover {
   color: #fff;
   background: transparent;
